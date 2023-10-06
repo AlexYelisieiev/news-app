@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+    <!-- <link rel="stylesheet" href="{% static 'css/article_detail.css' %}"> -->
+{% endblock head %}
+
+{% block content %}
+    <div class="styleBlock">
+        <h2>{{ object.title }}</h2>
+        <p>by {{ object.author }} | {{ object.date }}</p>
+        <p>{{ object.body }}</p>
+        {% if article.author == user %}
+            <p><a href="{% url 'article_edit' article.pk %}">Edit</a> | <a href="{% url 'article_delete' article.pk %}">Delete</a></p>
+        {% endif %}
+        <a href="{% url 'article_list' %}">Back to articles</a>
+        <div class="commentsBlock">
+            {% for comment in article.comments.all %}
+            {{ comment }} &middot; by {{ comment.author }}
+            {% if comment.author == user %}
+            | <a href="{% url 'comment_delete' comment.pk %}">Delete</a>
+            {% endif %}
+            <br>
+            {% endfor %}
+            <a href="{% url 'comment_create' article.pk %}"><b>Add comment</b></a>
+        </div>
+    </div>
+{% endblock content %}

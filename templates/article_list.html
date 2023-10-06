@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Articles{% endblock title %}
+
+{% block content %}
+    {% for article in object_list %}
+        <div class="styleBlock">
+            <div class="infoBlock">
+                <a href="{% url 'article_detail' article.pk %}"><span class="title">{{ article.title }}</span></a> &middot; <span class="author">by {{ article.author }}</span> | <span class="date">{{ article.date }}</span>
+            </div>
+            <div class="bodyBlock">
+                {{ article.body }}
+            </div>
+            {% if article.author == user %}
+                <div class="actionsBlock">
+                    <a href="{% url 'article_edit' article.pk %}">Edit</a> | <a href="{% url 'article_delete' article.pk %}">Delete</a>
+                </div>
+            {% endif %}
+            <div class="commentsBlock">
+                {% for comment in article.comments.all %}
+                    {{ comment }} &middot; by {{ comment.author }}
+                    {% if comment.author == user %}
+                        | <a href="{% url 'comment_delete' comment.pk %}">Delete</a>
+                    {% endif %}
+                    <br>
+                {% endfor %}
+                <a href="{% url 'comment_create' article.pk %}"><b>Add comment</b></a>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock content %}

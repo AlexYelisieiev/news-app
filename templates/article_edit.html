@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+    <!-- <link rel="stylesheet" href="{% static 'css/article_edit.css' %}"> -->
+{% endblock head %}
+
+{% block content %}
+    <div class="styleBlock">
+        <h1>Edit</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Update</button>
+        </form>
+        <a href="{% url 'article_list' %}">Back to articles</a>
+    </div>
+{% endblock content %}

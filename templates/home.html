@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Newspaper App{% endblock title %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock head %}
+
+{% block content %}
+    <div class="greeting">
+        <div class="greetingTextBlock">
+            <h1 class="welcomeText">Welcome to the site!</h1>
+            <h2 class="goToArticlesText">Here is the <a href="{% url 'article_list' %}">article list</a></h2>
+        </div>
+    </div>
+{% endblock content %}

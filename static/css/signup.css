@@ -1,0 +1,60 @@
+.signupBlock {
+    margin: 1.5vmin;
+    padding: 2vmin;
+    font-size: 3.5vmin;
+    width: fit-content;
+    border-radius: 2vmin;
+
+    /* Glass effect */
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.signupBlock input {
+    background: none;
+    font-size: 3.5vmin;
+    border: none;
+    outline: none;
+    font-family: 'Acme', sans-serif;
+    color: white;
+    padding-left: 1vmin;
+}
+
+.signupBlock input:focus {
+    outline: none;
+}
+
+.signupBlock p {
+    display: flex;
+}
+
+.signupBlock button {
+    border: none;
+    outline: none;
+    background-color: white;
+    font-family: 'Acme', sans-serif;
+    font-size: 2.5vmin;
+    width: 12.5vmin;
+    height: 5vmin;
+    border-radius: 1.5vmin;
+    transition-duration: 0.2s;
+    margin-top: 1vmin;
+    margin-bottom: 1vmin;
+}
+
+.signupBlock button:hover {
+    border: none;
+    outline: none;
+    background-color: white;
+    transform: scale(1.1);
+}
+
+.signupBlock button:focus {
+    border: none;
+    outline: none;
+    background-color: white;
+    box-shadow: none;
+    background-color: lightsteelblue;
+}

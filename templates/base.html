@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}Newspaper App{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <!-- Extra -->
+    {% block head %}{% endblock head %}
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="baseTitle">
+            <a href="{% url 'home' %}">Newspaper 📰</a>
+        </div>
+        <div class="baseAuth">
+        {% if user.is_authenticated %}
+            <span>🟢 Hi, {{ user.username }}!</span>
+            <span><a href="{% url 'article_new' %}">create artile</a> | <a href="{% url 'password_change' %}">change password</a> | <a href="{% url 'logout' %}">log out</a></span>
+        {% else %}
+            <span>🔴 You are not authenticated</span> 
+            <span><a href="{% url 'signup' %}">sign up</a> | <a href="{% url 'login' %}">log in</a></span>
+        {% endif %}
+        </div>
+    </nav>
+    <main>
+        {% block content %}
+        {% endblock content %}
+    </main>
+</body>
+
+</html>

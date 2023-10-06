@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="styleBlock">
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit">Submit</button>
+        </form>
+        <a href="{% url 'article_list' %}">Go back to articles</a>
+    </div>
+{% endblock content %}

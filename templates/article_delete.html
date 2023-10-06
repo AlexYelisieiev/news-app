@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="styleBlock">
+        <h1>Delete</h1>
+        <form action="" method="post">
+            {% csrf_token %}
+            <p>Are you sure you want to delete "{{ object.title }}"?</p>
+            <button type="submit">Confirm</button>
+        </form>
+        <a href="{% url 'article_list' %}">Back to articles</a>
+    </div>
+{% endblock content %}
