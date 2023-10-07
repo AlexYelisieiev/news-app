@@ -49,7 +49,7 @@ Here are some of the cool things you can do:
 
 ## 🤝 Contributing
 
-If you spot any issues or have ideas for improvements, please let me know by opening an issue or submitting a pull request. Together, we can make the world amazing!
+If you spot any issues or have ideas for improvements, please let me know by opening an issue or submitting a pull request.
 
 ## 📄 License
 
