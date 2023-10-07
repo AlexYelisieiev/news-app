@@ -1,10 +1,10 @@
 # News app
 
-## 🌟 Overview
+## 🌎 Overview
 
-Welcome to the news app! This is my first training Django project.
+This is my first training Django project. It's a news app that provides a bunch of basic experiences you can find on news platforms.
 
-## ✨ Features:
+## 🌟 Features:
 - accounts
 - login/signup
 - password change/reset via email
