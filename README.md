@@ -41,7 +41,7 @@ Ready to get started? Just follow these steps:
 
 Once the development server is up and running, you can access the news website by opening your browser and navigating to `http://localhost:8000`.
 
-Here are some of the cool things you can do:
+Here are some of the things you can do:
 
 - Browse through articles.
 - Create, update, and delete articles (requires authentication).
