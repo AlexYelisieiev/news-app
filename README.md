@@ -4,7 +4,7 @@
 
 This is my first training Django project. It's a news app that provides basic functionality on most news platforms.
 
-## 🌟 Features:
+## 🌟 Features
 - accounts
 - login/signup
 - password change/reset via email
