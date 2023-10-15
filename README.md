@@ -2,7 +2,7 @@
 
 ## 🌎 Overview
 
-This is my first training Django project. It's a news app that provides basic functionality on most news platforms.
+This is my first training Django project. It's a news app that provides basic functionality found on most news platforms.
 
 | 'Not logged in' screenshot | 'Article list' screenshot |
 | --- | --- |
