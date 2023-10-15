@@ -6,7 +6,7 @@ This is my first training Django project. It's a news app that provides basic fu
 
 | 'Not logged in' screenshot | 'Article list' screenshot |
 | --- | --- |
-| <img alt="'Not logged in' screenshot" src="https://github.com/FlameLine/news-app/blob/master/README_source/not_logged_in.jpg" width="450px"> | <img alt="'Article list' screenshot" src="https://github.com/FlameLine/news-app/blob/master/README_source/article_list.jpg" width="450px"> |
+| <img alt="'Not logged in' screenshot" src="https://github.com/FlameLine/news-app/blob/master/README_source/not_logged_in.jpg" width="100%"> | <img alt="'Article list' screenshot" src="https://github.com/FlameLine/news-app/blob/master/README_source/article_list.jpg" width="100%"> |
 
 ## 🌟 Features
 - accounts
